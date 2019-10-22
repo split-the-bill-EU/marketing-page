@@ -139,11 +139,11 @@ body {
   margin: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 17px;
-  color: brown;
   line-height: 1.6;
 }
 #split2 {
-  background-color: #1f0108;
+  color: #fcfaf9;
+  text-transform: uppercase;
 }
 #split {
   background-image: url(../img/adult.jpg);
@@ -161,13 +161,16 @@ body {
   font-size: 50px;
   line-height: 1.2;
 }
+h2 {
+  text-decoration: underline;
+}
 #split p {
   font-size: 20px;
 }
 #split .button {
   font-size: 18px;
   text-decoration: none;
-  background-color: white;
+  background-color: #ff6d33;
   color: black;
   border: #926239 1px solid;
   padding: 10px 20px;
@@ -176,19 +179,35 @@ body {
   width: auto;
 }
 #split .button:hover {
-  background: #f74b07;
+  background: #fcfaf9;
+  color: #1f0108;
+}
+.button {
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #ff6d33;
+  color: black;
+  border: #0c0c0c 1px solid;
+  padding: 5px 5px 5px 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+.button:hover {
+  background: #fcfaf9;
   color: #1f0108;
 }
 #section-a {
   padding: 20px;
-  background: #926239;
-  color: #fff;
+  background: #faf9f8;
+  color: #0c0c0c;
   text-align: center;
   overflow: hidden;
 }
 #section-b {
   padding: 20px;
   background: #f4f4f4;
+  color: black;
   text-align: center;
 }
 #section-c {
@@ -255,9 +274,7 @@ body {
     border-top: 1px solid rgba(197, 34, 34, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
-  }
-  .logo .flex-container .navigation .a .navigation li:last-of-type a {
-    border-bottom: none;
+    flex-direction: column;
   }
 }
 @media (max-width: 500px) {
@@ -286,7 +303,7 @@ body {
   background: #1f0108;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   text-align: left;
   font: bold;

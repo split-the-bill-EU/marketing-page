@@ -30,14 +30,14 @@
 }
 
 .navigation a {
-   .nav-a();
+    .nav-a();
 }
 
 .navigation a:hover {
     background: #00ace6;
 }
 
-@media  @mobile {
+@media @mobile {
 
 
 
@@ -46,9 +46,12 @@
         align-self: left;
 
         .flex-container {
-            display: flex;;
+            display: flex;
+            
+
 
             .navigation {
+
                 align-content: center;
 
 
@@ -58,21 +61,19 @@
                     border-top: 1px solid rgba(197, 34, 34, 0.3);
                     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                     overflow: hidden;
+                    flex-direction: column;
 
 
-                    .navigation li:last-of-type a {
-                        border-bottom: none;
-
-                    }
                 }
-
             }
+
         }
     }
 }
 
-@media  @mobile {
-    .footer-distributed{
+
+@media @mobile {
+    .footer-distributed {
         .custom-layout(center, column);
     }
 }
