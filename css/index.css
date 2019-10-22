@@ -1,3 +1,8 @@
+.nav-a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -162,8 +167,8 @@ body {
 #split .button {
   font-size: 18px;
   text-decoration: none;
-  background-color: #1f0108;
-  color: #f74b07;
+  background-color: white;
+  color: black;
   border: #926239 1px solid;
   padding: 10px 20px;
   border-radius: 10px;
@@ -179,6 +184,7 @@ body {
   background: #926239;
   color: #fff;
   text-align: center;
+  overflow: hidden;
 }
 #section-b {
   padding: 20px;
@@ -237,60 +243,212 @@ body {
     margin: 0.25em 0;
     align-self: left;
   }
-  .logo .navigation {
-    flex-direction: column;
+  .logo .flex-container {
+    display: flex;
   }
-  .logo .navigation .a {
+  .logo .flex-container .navigation {
+    align-content: center;
+  }
+  .logo .flex-container .navigation .a {
     text-align: center;
     padding: 10px;
     border-top: 1px solid rgba(197, 34, 34, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
-  .logo .navigation .a .navigation li:last-of-type a {
+  .logo .flex-container .navigation .a .navigation li:last-of-type a {
     border-bottom: none;
   }
 }
-#section-a {
-  padding: 20px;
-  background: #926239;
-  color: #fff;
-  text-align: center;
-}
-#section-b {
-  padding: 20px;
-  background: #f4f4f4;
-  text-align: center;
-}
-#section-c {
-  display: flex;
-}
-#section-c div {
-  padding: 20px;
-}
-#section-c .box-1,
-#section-c .box-3 {
-  background: #926239;
-  color: #fff;
-}
-#section-c .box-2 {
-  background: #f9f9f9;
+@media (max-width: 500px) {
+  .footer-distributed {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+}
+.section {
+  width: 100%;
+  display: inline-block;
+  background: #34495e;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  overflow: hidden;
+}
+.footer-distributed {
+  background: #1f0108;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  text-align: left;
+  font: bold;
+  overflow: hidden;
+  margin-top: 60px;
+  margin-right: 50px;
+  margin-left: -60px;
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+/* Footer left */
+.footer-distributed .footer-left {
+  width: 40%;
+}
+/* The company logo */
+.footer-distributed h3 {
+  color: #ff6d33;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+.footer-distributed h3 span {
+  color: lightseagreen;
+}
+/* Footer links */
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+.footer-distributed .footer-company-name {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+/* Footer Center */
+.footer-distributed .footer-center {
+  width: 35%;
+}
+.footer-distributed .footer-center i {
+  background-color: #ff6d33;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+.footer-distributed .footer-center p a {
+  color: white;
+  text-decoration: none;
+}
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+/* Footer Right */
+.footer-distributed .footer-right {
+  width: 20%;
+}
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #ff6d33;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+@media (max-width: 500px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+* {
+  margin: 0 ;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 .team-section {
   overflow: hidden;
   text-align: center;
-  background: #34495e;
+  background: white;
   padding: 60px;
 }
 .team-section h1 {
   text-transform: uppercase;
   margin-bottom: 60px;
-  color: white;
+  color: black;
 }
 .border {
   display: block;
@@ -323,10 +481,11 @@ body {
   width: 600px;
   margin: auto;
   font-size: 20px;
-  color: white;
+  color: black;
   text-align: justify;
   height: 0;
   overflow: hidden;
+  background-color: white;
 }
 .section:target {
   height: auto;
