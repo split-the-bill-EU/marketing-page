@@ -3,6 +3,11 @@
   padding: 1em;
   color: white;
 }
+.flex-style {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -193,36 +198,41 @@ h2 {
   margin-top: 10px;
   width: 100%;
 }
-.button:hover {
-  background: #fcfaf9;
-  color: #1f0108;
+.call-outs-container {
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
 }
-#section-a {
+.call-out {
   padding: 20px;
-  background: #faf9f8;
-  color: #0c0c0c;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  flex-basis: 30%;
+}
+@media (max-width: 500px) {
+  .call-outs-container .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+  }
+}
+.pay-img {
+  width: 60vw;
+  height: 40vh;
+}
+.call-out:nth-child(1) {
+  background-color: #33badb;
+}
+.call-out:nth-child(2) {
+  background-color: #f8f8fc;
+}
+.call-out:nth-child(3) {
+  background-color: #33badb;
+}
+.image-container {
+  max-width: 1400px;
   text-align: center;
-  overflow: hidden;
-}
-#section-b {
-  padding: 20px;
-  background: #f4f4f4;
-  color: black;
-  text-align: center;
-}
-#section-c {
-  display: flex;
-}
-#section-c div {
-  padding: 20px;
-}
-#section-c .box-1,
-#section-c .box-3 {
-  background: #926239;
-  color: #fff;
-}
-#section-c .box-2 {
-  background: #f9f9f9;
 }
 .flex-container {
   display: flex;
@@ -255,18 +265,21 @@ h2 {
   color: white;
 }
 .navigation a:hover {
-  background: #00ace6;
+  background: #ff6d33;
 }
 @media (max-width: 500px) {
   .logo {
     margin: 0.25em 0;
     align-self: left;
+    width: 100vw;
   }
   .logo .flex-container {
     display: flex;
+    width: 100vw;
   }
   .logo .flex-container .navigation {
     align-content: center;
+    width: 100vw;
   }
   .logo .flex-container .navigation .a {
     text-align: center;
@@ -275,6 +288,7 @@ h2 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
     flex-direction: column;
+    width: 100vw;
   }
 }
 @media (max-width: 500px) {
@@ -303,14 +317,14 @@ h2 {
   background: #1f0108;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   text-align: left;
   font: bold;
   overflow: hidden;
   margin-top: 60px;
-  margin-right: 50px;
-  margin-left: -60px;
+  margin-right: auto;
+  margin-left: 0px;
 }
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
@@ -442,7 +456,7 @@ h2 {
   .footer-distributed .footer-center,
   .footer-distributed .footer-right {
     display: block;
-    width: 100%;
+    width: 100vw;
     margin-bottom: 40px;
     text-align: center;
   }
@@ -450,11 +464,21 @@ h2 {
     margin-left: 0;
   }
 }
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
 * {
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
+}
+.body {
+  overflow: hidden;
 }
 .team-section {
   overflow: hidden;
@@ -464,7 +488,7 @@ h2 {
 }
 .team-section h1 {
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   color: black;
 }
 .border {
@@ -472,34 +496,29 @@ h2 {
   margin: auto;
   width: 160px;
   height: 3px;
-  background: #3498db;
-  margin-bottom: 60px;
+  background: #ff6d33;
+  margin-bottom: 40px;
 }
 .ps {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 .ps a {
   display: inline-block;
-  margin: 0 30px;
-  width: 160 px;
-  height: 160px;
+  margin: 0 20px;
+  width: 180px;
+  height: 170px;
   overflow: hidden;
   border-radius: 50%;
 }
-.ps a img {
-  width: 100%;
-  filter: grayscale(100%);
-  transition: 0.4s all;
-}
-.ps a:hover > img {
-  filter: none;
-}
 .section {
-  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 550px;
   margin: auto;
   font-size: 20px;
   color: black;
-  text-align: justify;
+  text-align: center;
   height: 0;
   overflow: hidden;
   background-color: white;

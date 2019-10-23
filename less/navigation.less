@@ -1,3 +1,5 @@
+
+
 .flex-container {
     display: flex;
     justify-content: space-between;
@@ -34,25 +36,24 @@
 }
 
 .navigation a:hover {
-    background: #00ace6;
+    background: @btn-background;
 }
 
 @media @mobile {
 
-
-
     .logo {
         margin: .25em 0;
         align-self: left;
-
-        .flex-container {
+        width: 100vw;
+        .flex-container  {
             display: flex;
-            
+            width: 100vw;
 
 
             .navigation {
 
                 align-content: center;
+                width: 100vw;
 
 
                 .a {
@@ -62,7 +63,7 @@
                     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                     overflow: hidden;
                     flex-direction: column;
-
+                    width: 100vw;
 
                 }
             }

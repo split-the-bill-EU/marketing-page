@@ -75,41 +75,46 @@ h2 {
   width: 100%;
 }
 
-.button:hover {
-  background: #fcfaf9;
-  color: rgb(31, 1, 8);
+
+.call-outs-container {
+  max-width: 1400px;
+  margin: 40px auto 0 auto;
 }
 
-#section-a {
+.call-out {
   padding: 20px;
-  background: #faf9f8;
-  color: rgb(12, 12, 12);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  flex-basis: 30%;
+}
+
+@media @mobile {
+  .call-outs-container .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+
+    
+    
+  }
+}
+
+.pay-img {
+  width: 60vw;
+  height: 40vh;
+}
+
+.call-out:nth-child(1) {background-color: #33badb;}
+.call-out:nth-child(2) {background-color: #f8f8fc;}
+.call-out:nth-child(3) {background-color: #33badb;}
+
+
+.image-container {
+  max-width: 1400px;
   text-align: center;
-  overflow: hidden;
-}
+  
 
-#section-b {
-  padding: 20px;
-  background: #f4f4f4;
-  color: black;
-  text-align: center;
-}
-
-#section-c {
-  display: flex;
-}
-
-#section-c div {
-  padding: 20px;
-}
-
-#section-c .box-1,
-#section-c .box-3 {
-  background: #926239;
-  color: #fff;
-}
-
-#section-c .box-2 {
-  background: #f9f9f9;
 }
 
