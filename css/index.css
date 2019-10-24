@@ -222,7 +222,7 @@ h2 {
   height: 35vh;
 }
 .call-out:nth-child(1) {
-  background-color: #f6f9fa;
+  background-color: #f8f8fc;
 }
 .call-out:nth-child(2) {
   background-color: #f8f8fc;
@@ -254,7 +254,6 @@ h2 {
 .logo a,
 .navigation a {
   text-decoration: none;
-  letter-spacing: 0.45rem;
 }
 .navigation {
   display: flex;
@@ -269,12 +268,14 @@ h2 {
 }
 @media (max-width: 500px) {
   .logo {
-    margin: 0.25em 0;
-    align-self: left;
+    margin: 0.15em 0;
+    align-self: center;
     width: 100vw;
   }
   .logo .flex-container {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 100vw;
   }
   .logo .flex-container .navigation {
@@ -283,11 +284,8 @@ h2 {
   }
   .logo .flex-container .navigation .a {
     text-align: center;
-    padding: 10px;
-    border-top: 1px solid rgba(197, 34, 34, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
     overflow: hidden;
-    flex-direction: column;
     width: 100vw;
   }
 }
