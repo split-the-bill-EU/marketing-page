@@ -211,24 +211,24 @@ h2 {
 @media (max-width: 500px) {
   .call-outs-container .image-container {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    flex-direction: column;
     height: auto;
     width: auto;
   }
 }
 .pay-img {
   width: 60vw;
-  height: 40vh;
+  height: 35vh;
 }
 .call-out:nth-child(1) {
-  background-color: #33badb;
+  background-color: #f6f9fa;
 }
 .call-out:nth-child(2) {
   background-color: #f8f8fc;
 }
 .call-out:nth-child(3) {
-  background-color: #33badb;
+  background-color: #f8fbfc;
 }
 .image-container {
   max-width: 1400px;
