@@ -317,14 +317,14 @@ h2 {
   background: #1f0108;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
-  width: 100%;
-  position: absolute;
-  text-align: left;
   font: bold;
-  overflow: hidden;
+  position: absolute;
   margin-top: 60px;
   margin-right: auto;
   margin-left: 0px;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
 }
 .footer-distributed .footer-left,
 .footer-distributed .footer-center,
@@ -341,9 +341,6 @@ h2 {
   color: #ff6d33;
   font: normal 36px 'Open Sans', cursive;
   margin: 0;
-}
-.footer-distributed h3 span {
-  color: lightseagreen;
 }
 /* Footer links */
 .footer-distributed .footer-links {
@@ -482,9 +479,9 @@ html {
 }
 .team-section {
   overflow: hidden;
-  text-align: center;
-  background: white;
   padding: 60px;
+  text-align: center;
+  background: #f8f5f5;
 }
 .team-section h1 {
   text-transform: uppercase;
